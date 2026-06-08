@@ -16,7 +16,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             set -e                              
-            cd /var/www
+            cd /var/www/cdtest
             git pull origin main                
             sudo nginx -t                       
             sudo systemctl reload nginx 
